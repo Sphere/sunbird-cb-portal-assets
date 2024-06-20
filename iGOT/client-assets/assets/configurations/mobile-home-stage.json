@@ -1,0 +1,33 @@
+{
+    "userLoggedInSection": {
+        "firstCourse": true,
+        "howDoesItWork": false,
+        "categories": false,
+        "topCertifiedCourse": true,
+        "featured": true,
+        "followPeople": false,
+        "myCourses": true
+    },
+    "bannerContent": [
+        {
+            "title": "Check out courses with CNE Hours",
+            "titleHi": "सीएनई आवर्स के साथ पाठ्यक्रम देखें",
+            "img": "https://aastar-app-assets.s3.ap-south-1.amazonaws.com/cne.svg",
+            "scrollEmit": "scrollToCneCourses",
+            "bg-color":"#D7AC5C;"
+        },
+        {
+            "title": "Watch tutorials on how sphere works",
+            "titleHi": "जानिए स्फीयर कैसे काम करता है",
+            "img": "https://aastar-app-assets.s3.ap-south-1.amazonaws.com/how_works.svg",
+            "scrollEmit": "scrollToHowSphereWorks",
+            "bg-color":"#469788;"
+        }
+    ],
+    "topCertifiedCourseIdentifier": ["do_11373917005090816015185","do_11403159788374425613","do_1139152835365683201371","do_1138722211633889281159","do_1138672171025203201154"],
+
+    "featuredCourseIdentifier":["do_11357408383009587211503"],
+    "cneCoursesIdentifier": [
+        "do_1138659326946508801126","do_1138631076415242241103","do_113855808361840640128","do_11403573291265228811","do_1139209447509688321472","do_11403159788374425613"
+    ]
+}

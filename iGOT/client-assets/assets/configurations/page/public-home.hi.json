@@ -77,58 +77,6 @@
           }
         ],
         [
-          {
-            "dimensions": {},
-            "widget": {
-              "widgetType": "contentStrip",
-              "widgetSubType": "contentStripMultiple",
-              "widgetData": {
-                "strips": [
-                  {
-                    "key": "latest",
-                    "title": "नवीनतम",
-                    "info": {
-                      "mode": "below",
-                      "visibilityMode": "hidden",
-                      "icon": {
-                        "icon": "info",
-                        "scale": 0.8
-                      },
-                      "widget": {
-                        "widgetType": "element",
-                        "widgetSubType": "elementHtml",
-                        "widgetData": {
-                          "html": "<p class=\"ws-mat-primary-text\">यहाँ आपको ऐसे विषयों के बारे में जानकारी मिलेगी जो वर्तमान में सुर्खियों में हैं.</p>"
-                        }
-                      }
-                    },
-                    "stripConfig": {
-                      "cardSubType": "card-badges",
-                      "postCardForSearch": true
-                    }, 
-                    "filters": [],
-                    "request": {
-                      "searchV6": {
-                        "request": {
-                          "filters": {
-                            "primaryCategory": [
-                              "Course"
-                            ],
-                            "contentType": [
-                              "Course"
-                            ]
-                          },
-                          "sort_by": {
-                            "lastUpdatedOn": "desc"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
         ]
       ]
     }
