@@ -427,7 +427,6 @@
       "url": "/app/search/home",
       "shortName": "Search",
       "src": "/fusion-assets/icons/Search.svg"
-
     },
     "feature_settings": {
       "accessKey": "I",
@@ -608,7 +607,26 @@
       "toolTip": "Account",
       "url": "/app/profile-view",
       "shortName": "Competency",
-      "src":  "/fusion-assets/icons/Account.svg"
+      "src": "/fusion-assets/icons/Account.svg"
+    },
+    "feature_notification_details": {
+      "accessKey": "",
+      "icon": "/fusion-assets/icons/Account.svg",
+      "iconType": "image",
+      "id": "feature_notification_details",
+      "keywords": [
+        "Notification"
+      ],
+      "name": "Notification",
+      "permission": [
+        "ABOUT_US"
+      ],
+      "show": true,
+      "status": "live",
+      "toolTip": "Notification",
+      "url": "/notification",
+      "shortName": "Notification",
+      "src": "/fusion-assets/icons/notifications.svg"
     }
   },
   "groups": [

@@ -372,7 +372,7 @@
         {
           "type": "featureButton",
           "config": {
-            "actionBtnId": "feature_account_details",
+            "actionBtnId": "feature_notification_details",
             "config": {
               "type": "card-mini"
             }
