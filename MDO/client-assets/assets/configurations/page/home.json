@@ -97,6 +97,17 @@
                   "routerLink": "/app/notifications"
                 },
                 {
+                  "name": "Events",
+                  "key": "events",
+                  "render": true,
+                  "badges": {
+                    "enabled": false,
+                    "uri": ""
+                  },
+                  "enabled": true,
+                  "routerLink": "/app/event-dashboard"
+                },
+                {
                   "name": "About",
                   "key": "about",
                   "render": true,
