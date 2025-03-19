@@ -86,7 +86,8 @@
                     "routerLink": "/app/home/event-dashboard",
                     "requiredRoles": [
                         "admin",
-                        "mdo_admin"
+                        "mdo_admin",
+                        "certificate_manager"
                     ]
                 }
             ]
