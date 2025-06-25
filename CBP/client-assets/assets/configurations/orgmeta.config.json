@@ -1,6 +1,13 @@
 {
   "sources": [
     {
+      "sourceName": "Aastrika Foundation",
+      "sourceId": "",
+      "logo": "https://www.aastrika.org/wp-content/uploads/2023/09/aastrika-foundation-logo.svg",
+      "about": "Aastrika Foundation",
+      "taggedSourceName": "Others"
+    },
+    {
       "sourceName": "Fernandez Foundation",
       "sourceId": "",
       "logo": "https://aastar-assets.s3.ap-south-1.amazonaws.com/orgLogos/fernandez.jpg",
@@ -12,7 +19,7 @@
       "sourceId": "",
       "logo": "https://aastar-assets.s3.ap-south-1.amazonaws.com/orgLogos/maternity-foundation.png",
       "about": "Maternity Foundation",
-      "taggedSourceName": "Others"
+      "taggedSourceName": "Indian Nursing Council"
     },
     {
       "sourceName": "Indian Nursing Council",
@@ -155,7 +162,7 @@
       "sourceName": "UPTSU",
       "sourceId": "",
       "logo": "https://aastar-assets.s3.ap-south-1.amazonaws.com/orgLogos/uptsu-logo.png",
-      "about": "India Health Action Trust",
+      "about": "UPTSU",
       "taggedSourceName": "Others"
     },
     {
@@ -183,6 +190,56 @@
       "logo": "https://aastar-app-assets.s3.ap-south-1.amazonaws.com/ihat.png",
       "about": "India Health Action Trust",
       "taggedSourceName": ""
+    },
+    {
+      "sourceName": "TRAINED NURSES' ASSOCIATION OF INDIA (TNAI)",
+      "sourceId": "",
+      "logo": "https://aastar-assets.s3.ap-south-1.amazonaws.com/orgLogos/TNAI.png",
+      "about": "TNAI",
+      "closedCoursesList": [
+        "do_11357408383009587211503",
+        "do_1134170689871134721450",
+        "do_1136137511548764161792",
+        "do_11376124906447667219",
+        "do_1137533766819430401136",
+        "do_11390679694610432011",
+        "do_1134170690068725761467",
+        "do_11342648503935795211688",
+        "do_11357413932438323211506",
+        "do_1134948846567587841450",
+        "do_113747721622495232118",
+        "do_1138142711417733121282",
+        "do_1138142243687792641209",
+        "do_11364359200093798411215",
+        "do_1138142607609528321266",
+        "do_1138141555188121601143",
+        "do_1136131852573327361783",
+        "do_1138142849466777601296",
+        "do_11364359758261452811223",
+        "do_11364354049800601611197",
+        "do_11364359200093798411215",
+        "do_11364360896278528011230",
+        "do_11364352247814553611189",
+        "do_1136131852573327361783",
+        "do_11364356032219545611207"
+      ]
+    },
+    {
+      "sourceName": "Tamil Nadu Nurses and Midwives Council (TNNMC)",
+      "sourceId": "",
+      "logo": "https://aastar-assets.s3.ap-south-1.amazonaws.com/orgLogos/35cb2f822a3a2cc716f9111e2622d9e4306e6c7b+1.png",
+      "bgImage": "https://aastar-assets.s3.ap-south-1.amazonaws.com/orgLogos/5+1.png",
+      "about": "TNNMC",
+      "closedCoursesList": [
+        "do_1134170689871134721450",
+        "do_11342648503935795211688",
+        "do_11357413932438323211506",
+        "do_1136137511548764161792",
+        "do_11376124906447667219",
+        "do_11378822335428198411",
+        "do_113789659935694848169",
+        "do_1137533766819430401136"
+      ]
     }
   ]
 }
