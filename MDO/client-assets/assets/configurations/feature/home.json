@@ -89,6 +89,40 @@
                         "mdo_admin",
                         "certificate_manager"
                     ]
+                },
+                {
+                    "name": "Frac",
+                    "key": "Frac",
+                    "fragment": false,
+                    "render": true,
+                    "badges": {
+                        "enabled": false,
+                        "uri": ""
+                    },
+                    "enabled": true,
+                    "routerLink": "/app/home/frac/dashboard",
+                    "requiredRoles": [
+                        "admin",
+                        "mdo_admin",
+                        "FRAC_ADMIN"
+                    ]
+                },
+                {
+                    "name": "Manage Positions",
+                    "key": "position",
+                    "fragment": false,
+                    "render": true,
+                    "badges": {
+                        "enabled": false,
+                        "uri": ""
+                    },
+                    "enabled": true,
+                    "routerLink": "/app/home/frac/position",
+                    "requiredRoles": [
+                        "admin",
+                        "mdo_admin",
+                        "FRAC_ADMIN"
+                    ]
                 }
             ]
         }
