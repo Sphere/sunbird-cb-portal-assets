@@ -91,7 +91,7 @@
                     ]
                 },
                 {
-                    "name": "Frac",
+                    "name": "FRAC",
                     "key": "Frac",
                     "fragment": false,
                     "render": true,
