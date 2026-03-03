@@ -57,7 +57,23 @@
                   "admin",
                   "mdo_admin"
               ]
-          }
+          },
+          {
+            "name": "Events",
+            "key": "events",
+            "fragment": false,
+            "render": true,
+            "badges": {
+                "enabled": false,
+                "uri": ""
+            },
+            "enabled": true,
+            "routerLink": "/app/home/event-dashboard",
+            "requiredRoles": [
+                "admin",
+                "mdo_admin"
+            ]
+        }
         ]
       }
     },

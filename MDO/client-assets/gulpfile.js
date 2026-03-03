@@ -33,7 +33,9 @@ function minimizeCss() {
 
 // minimize & optimize image formats: jpg, png, svg, gif
 function minimizeImages() {
-    return gulp.src("./assets/**/*.+(jpg|png|svg|gif)")
+    // Keep SVGs untouched for compatibility across consumers.
+    // `transfer` already copies originals; this step only overwrites raster formats.
+    return gulp.src("./assets/**/*.+(jpg|png|gif)")
         .pipe(
             imagemin([
                 imagemin.jpegtran({
@@ -44,15 +46,6 @@ function minimizeImages() {
                 }),
                 imagemin.optipng({
                     optimizationLevel: 5
-                }),
-                imagemin.svgo({
-                    plugins: [{
-                            removeViewBox: true
-                        },
-                        {
-                            cleanupIDs: false
-                        }
-                    ]
                 })
             ])
         )
