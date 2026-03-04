@@ -11,9 +11,9 @@ const cssnano = require("cssnano");
 const getPlugin = (plugin) => plugin.default || plugin;
 
 // plugins
-const imageminJpegtran = getPlugin(require("imagemin-jpegtran"));
-const imageminGifsicle = getPlugin(require("imagemin-gifsicle"));
-const imageminOptipng = getPlugin(require("imagemin-optipng"));
+// const imageminJpegtran = getPlugin(require("imagemin-jpegtran"));
+// const imageminGifsicle = getPlugin(require("imagemin-gifsicle"));
+// const imageminOptipng = getPlugin(require("imagemin-optipng"));
 const imageminSvgo = getPlugin(require("imagemin-svgo"));
 const outputPath = "./dist/";
 
@@ -43,22 +43,14 @@ function minimizeImages() {
     return gulp.src("./assets/**/*.{jpg,png,svg,gif}")
         .pipe(
             imagemin([
-                imageminJpegtran({ progressive: true }),
-                imageminGifsicle({ interlaced: true }),
-                imageminOptipng({ optimizationLevel: 5 }),
+                // imageminJpegtran({ progressive: true }),
+                // imageminGifsicle({ interlaced: true }),
+                // imageminOptipng({ optimizationLevel: 5 }),
                 imageminSvgo({
                     plugins: [
-                        {
-                            name: "preset-default",
-                        },
-                        {
-                            name: "removeViewBox",
-                            active: false, // ✅ keeps viewBox
-                        },
-                        {
-                            name: "cleanupIds",
-                            active: false, // ✅ keeps IDs
-                        }
+                        { name: "preset-default" },
+                        { name: "removeViewBox", active: false },
+                        { name: "cleanupIds", active: false }
                     ]
                 })
             ])
