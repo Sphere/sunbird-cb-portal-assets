@@ -8,12 +8,13 @@ const del = require("del");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 
-// ✅ Image plugins
-const imageminJpegtran = require("imagemin-jpegtran");
-const imageminGifsicle = require("imagemin-gifsicle");
-const imageminOptipng = require("imagemin-optipng");
-const imageminSvgo = require("imagemin-svgo");
+const getPlugin = (plugin) => plugin.default || plugin;
 
+// plugins
+const imageminJpegtran = getPlugin(require("imagemin-jpegtran"));
+const imageminGifsicle = getPlugin(require("imagemin-gifsicle"));
+const imageminOptipng = getPlugin(require("imagemin-optipng"));
+const imageminSvgo = getPlugin(require("imagemin-svgo"));
 const outputPath = "./dist/";
 
 // uglify all javascript code
@@ -46,17 +47,19 @@ function minimizeImages() {
                 imageminGifsicle({ interlaced: true }),
                 imageminOptipng({ optimizationLevel: 5 }),
                 imageminSvgo({
-                plugins: [
-                    {
-                        name: "preset-default",
-                        params: {
-                            overrides: {
-                                removeViewBox: false,
-                                cleanupIds: false
-                            }
+                    plugins: [
+                        {
+                            name: "preset-default",
+                        },
+                        {
+                            name: "removeViewBox",
+                            active: false, // ✅ keeps viewBox
+                        },
+                        {
+                            name: "cleanupIds",
+                            active: false, // ✅ keeps IDs
                         }
-                    }
-                ]
+                    ]
                 })
             ])
         )
