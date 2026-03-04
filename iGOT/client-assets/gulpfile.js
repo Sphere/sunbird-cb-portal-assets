@@ -46,12 +46,9 @@ function minimizeImages() {
                     optimizationLevel: 5
                 }),
                 imagemin.svgo({
-                    plugins: [{
-                            removeViewBox: true
-                        },
-                        {
-                            cleanupIDs: false
-                        }
+                    plugins: [
+                        { name: 'removeViewBox', active: false },
+                        { name: 'cleanupIDs', active: false }
                     ]
                 })
             ])
