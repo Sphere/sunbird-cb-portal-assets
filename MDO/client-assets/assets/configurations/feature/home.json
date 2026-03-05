@@ -104,7 +104,7 @@
                     "requiredRoles": [
                         "admin",
                         "mdo_admin",
-                        "FRAC_ADMIN"
+                        "frac_admin"
                     ]
                 },
                 {
@@ -121,7 +121,7 @@
                     "requiredRoles": [
                         "admin",
                         "mdo_admin",
-                        "FRAC_ADMIN"
+                        "frac_admin"
                     ]
                 }
             ]
