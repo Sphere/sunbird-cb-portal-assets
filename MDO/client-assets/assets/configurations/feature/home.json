@@ -21,7 +21,8 @@
                     "requiredRoles": [
                         "admin",
                         "mdo_admin",
-                        "wat_member"
+                        "wat_member",
+                        "frac_admin"
                     ]
                 },
                 {
@@ -102,8 +103,6 @@
                     "enabled": true,
                     "routerLink": "/app/home/frac/dashboard",
                     "requiredRoles": [
-                        "admin",
-                        "mdo_admin",
                         "frac_admin"
                     ]
                 },
@@ -119,8 +118,6 @@
                     "enabled": true,
                     "routerLink": "/app/home/frac/position",
                     "requiredRoles": [
-                        "admin",
-                        "mdo_admin",
                         "frac_admin"
                     ]
                 }
