@@ -3,11 +3,18 @@
 const gulp = require("gulp");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
-const gulpIf = require('gulp-if');
-const cssnano = require('gulp-cssnano');
-const jsonminify = require('gulp-jsonminify');
+const jsonminify = require("gulp-jsonminify");
 const del = require("del");
+const postcss = require("gulp-postcss");
+const cssnano = require("cssnano");
 
+const getPlugin = (plugin) => plugin.default || plugin;
+
+// plugins
+// const imageminJpegtran = getPlugin(require("imagemin-jpegtran"));
+// const imageminGifsicle = getPlugin(require("imagemin-gifsicle"));
+// const imageminOptipng = getPlugin(require("imagemin-optipng"));
+const imageminSvgo = getPlugin(require("imagemin-svgo"));
 const outputPath = "./dist/";
 
 // uglify all javascript code
@@ -27,31 +34,23 @@ function minimizeJSON() {
 // minimize all css
 function minimizeCss() {
     return gulp.src("./assets/**/*.css")
-        .pipe(cssnano())
+        .pipe(postcss([cssnano()]))
         .pipe(gulp.dest(outputPath));
 }
 
 // minimize & optimize image formats: jpg, png, svg, gif
 function minimizeImages() {
-    return gulp.src("./assets/**/*.+(jpg|png|svg|gif)")
+    return gulp.src("./assets/**/*.{jpg,png,svg,gif}")
         .pipe(
             imagemin([
-                imagemin.jpegtran({
-                    progressive: true
-                }),
-                imagemin.gifsicle({
-                    interlaced: true
-                }),
-                imagemin.optipng({
-                    optimizationLevel: 5
-                }),
-                imagemin.svgo({
-                    plugins: [{
-                            removeViewBox: true
-                        },
-                        {
-                            cleanupIDs: false
-                        }
+                // imageminJpegtran({ progressive: true }),
+                // imageminGifsicle({ interlaced: true }),
+                // imageminOptipng({ optimizationLevel: 5 }),
+                imageminSvgo({
+                    plugins: [
+                        { name: "preset-default" },
+                        { name: "removeViewBox", active: false },
+                        { name: "cleanupIds", active: false }
                     ]
                 })
             ])
@@ -61,21 +60,31 @@ function minimizeImages() {
 
 // transfer everything to destination
 function transfer() {
-    return gulp.src("./assets/**")
-        .pipe(gulp.dest(outputPath));
+    return gulp.src([
+        "./assets/**/*",
+        "!./assets/**/*.js",
+        "!./assets/**/*.json",
+        "!./assets/**/*.css",
+        "!./assets/**/*.{jpg,png,svg,gif}"
+    ])
+    .pipe(gulp.dest(outputPath));
 }
 
 // clean content inside dist folder
-const clean = () => del(["dist/**"]);
+function clean() {
+  return del(["dist/**"]);
+}
 
 // execute all tasks like transfer, minimizing images
 const build = gulp.series(
     clean,
-    transfer,
-    uglifyScripts,
-    minimizeJSON,
-    minimizeCss,
-    minimizeImages,
+    gulp.parallel(
+        transfer,
+        uglifyScripts,
+        minimizeJSON,
+        minimizeCss,
+        minimizeImages
+    )
 );
 
 exports.default = build;
