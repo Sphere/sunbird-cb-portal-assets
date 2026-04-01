@@ -50,7 +50,7 @@ function minimizeImages() {
                     plugins: [
                         { name: "preset-default" },
                         { name: "removeViewBox", active: false },
-                        { name: "cleanupIds", active: false }
+                        { name: "cleanupIDs", active: false }
                     ]
                 })
             ])
