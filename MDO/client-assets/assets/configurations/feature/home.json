@@ -120,7 +120,25 @@
                     "requiredRoles": [
                         "frac_admin"
                     ]
-                }
+                },
+                    {
+                        "name": "Playlist",
+                        "key": "playlist",
+                        "fragment": false,
+                        "render": true,
+                        "badges": {
+                            "enabled": false,
+                            "uri": ""
+                        },
+                        "enabled": true,
+                        "routerLink": "/app/home/playlist",
+                        "routerLinkActiveOptions": {
+                            "exact": false
+                        },
+                        "requiredRoles": [
+                            "frac_admin"
+                        ]
+                    }
             ]
         }
     }
