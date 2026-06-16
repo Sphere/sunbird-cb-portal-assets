@@ -22,7 +22,10 @@
                         "admin",
                         "mdo_admin",
                         "wat_member",
-                        "frac_admin"
+                        "frac_admin",
+                        "frac_read",
+                        "playlist_admin",
+                        "playlist_read"
                     ]
                 },
                 {
