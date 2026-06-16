@@ -22,7 +22,10 @@
                         "admin",
                         "mdo_admin",
                         "wat_member",
-                        "frac_admin"
+                        "frac_admin",
+                        "frac_read",
+                        "playlist_admin",
+                        "playlist_read"
                     ]
                 },
                 {
@@ -103,7 +106,8 @@
                     "enabled": true,
                     "routerLink": "/app/home/frac/dashboard",
                     "requiredRoles": [
-                        "frac_admin"
+                        "frac_admin",
+                        "frac_read"
                     ]
                 },
                 {
@@ -118,7 +122,8 @@
                     "enabled": true,
                     "routerLink": "/app/home/frac/position",
                     "requiredRoles": [
-                        "frac_admin"
+                        "frac_admin",
+                        "frac_read"
                     ]
                 },
                     {
@@ -136,7 +141,8 @@
                             "exact": false
                         },
                         "requiredRoles": [
-                            "frac_admin"
+                            "playlist_admin",
+                            "playlist_read"
                         ]
                     }
             ]
