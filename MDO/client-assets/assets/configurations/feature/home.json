@@ -21,7 +21,11 @@
                     "requiredRoles": [
                         "admin",
                         "mdo_admin",
-                        "wat_member"
+                        "wat_member",
+                        "frac_admin",
+                        "frac_read",
+                        "playlist_admin",
+                        "playlist_read"
                     ]
                 },
                 {
@@ -89,7 +93,58 @@
                         "mdo_admin",
                         "certificate_manager"
                     ]
-                }
+                },
+                {
+                    "name": "FRAC",
+                    "key": "Frac",
+                    "fragment": false,
+                    "render": true,
+                    "badges": {
+                        "enabled": false,
+                        "uri": ""
+                    },
+                    "enabled": true,
+                    "routerLink": "/app/home/frac/dashboard",
+                    "requiredRoles": [
+                        "frac_admin",
+                        "frac_read"
+                    ]
+                },
+                {
+                    "name": "Manage Positions",
+                    "key": "position",
+                    "fragment": false,
+                    "render": true,
+                    "badges": {
+                        "enabled": false,
+                        "uri": ""
+                    },
+                    "enabled": true,
+                    "routerLink": "/app/home/frac/position",
+                    "requiredRoles": [
+                        "frac_admin",
+                        "frac_read"
+                    ]
+                },
+                    {
+                        "name": "Playlist",
+                        "key": "playlist",
+                        "fragment": false,
+                        "render": true,
+                        "badges": {
+                            "enabled": false,
+                            "uri": ""
+                        },
+                        "enabled": true,
+                        "routerLink": "/app/home/playlist",
+                        "routerLinkActiveOptions": {
+                            "exact": false
+                        },
+                        "requiredRoles": [
+                            "playlist_admin",
+                            "playlist_read"
+                        ]
+                    }
             ]
         }
     }
